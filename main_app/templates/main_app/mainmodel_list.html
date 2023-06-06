@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="text-center">
+    <p>{{ paginator.count }} total</p>
+    <p><a href="{%  url 'main_app:create' %}">Create</a></p>
+</div>
+<hr>
+{% for object in object_list %}
+{{object}}<br>
+<a href="{% url 'main_app:detail' object.pk %}">Detail</a><br>
+<a href="{% url 'main_app:detail_view' object.pk %}">Detail_View</a><br>
+<hr>
+<!--{{object.file}}<br>-->
+<!--{{object.file.name}}<br>-->
+<!--{{object.file.url}}<br>-->
+{% endfor %}
+{% include 'pagination.html' %}
+{% endblock body %}

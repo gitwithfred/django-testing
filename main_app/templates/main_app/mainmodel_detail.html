@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+{{object}}<br>
+<!--{{object.file}}<br>-->
+<!--{{object.file.name}}<br>-->
+<!--{{object.file.url}}<br>-->
+<p><a href="{% url 'main_app:update' object.pk %}">Update</a></p>
+<p><a href="{% url 'main_app:delete' object.pk %}">Delete</a></p>
+<p><a href="{% url 'main_app:form_view' object.pk %}">form_view</a></p>
+{% endblock body %}
