@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>{{heading}}</h1>
+<p><a href="{% url 'main_app:form_view' %}">form_view</a></p>
+<p><a href="{% url 'main_app:set_custom_permission' %}">set_custom_permission</a></p>
+<p><a href="{% url 'main_app:user_model_form' %}">user_model_form</a></p>
+{% endblock body %}

@@ -54,7 +54,9 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,5 +151,5 @@ LOGGING = {
 }
 
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'main_app:home'
-LOGOUT_REDIRECT_URL = 'main_app:home'
+LOGIN_REDIRECT_URL = 'main_app:index'
+LOGOUT_REDIRECT_URL = 'main_app:index'
